@@ -86,7 +86,7 @@ export async function embedEmails(emails) {
     const email = emails[i];
     const prepared = prepareEmailForEmbedding(email.data);
     
-    console.log(`   Processing ${i + 1}/${emails.length}: ${prepared.metadata.subject}`);
+    console.log(`Processing ${i + 1}/${emails.length}: ${prepared.metadata.subject}`);
     
     // Create embedding
     const embedding = await createEmbedding(prepared.text);
